@@ -1,7 +1,7 @@
-import { getSession } from '@auth0/nextjs-auth0';
+import { auth0 } from './lib/auth0';
 
 export default async function Page() {
-  const session = await getSession();
+  const session = await auth0.getSession();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
